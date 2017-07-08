@@ -21,6 +21,8 @@ def read_data(repo):
 
 def gather_metadata(project, type):
   max_pages = 10000000 # limite de paginas da api do github
+	
+  i = 0	
 
   for page in range(1, max_pages):
     print "Page: " + str(page)
@@ -30,12 +32,14 @@ def gather_metadata(project, type):
     try:
       forks = read_data(repo)
       print "Total pagina " + str(page) + ": " + str(len(forks))
+			i += len(forks)
 
       for fork in forks:
         print fork['full_name']
 
     except NoMorePagesAvailable:
       sys.exit("We are done!!")
+			print "Total of forks: " + str(i) 
 
 
 period = gather_metadata("funcoeszz/funcoeszz", "forks")
