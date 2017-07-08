@@ -2,7 +2,7 @@
 
 Nesse primeiro exemplo, vamos baixar todos os forks de um projeto. O projeto, no caso, é a ``funcoeszz``. Ao fim da execução, os nomes dos forks da ``funcoeszz`` serão impressos no terminal.
 
-```
+```python
 import json, requests, sys
 
 class NoMorePagesAvailable(Exception):
