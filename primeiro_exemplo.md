@@ -32,7 +32,7 @@ def gather_metadata(project, type):
     try:
       forks = read_data(repo)
       print "Total pagina " + str(page) + ": " + str(len(forks))
-			i += len(forks)
+      i += len(forks)
 
       for fork in forks:
         print fork['full_name']
